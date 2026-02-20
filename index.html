@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love 💖</title>
+
+<style>
+        /* --- Overlay (The Curtain) --- */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff6a88 0%, #ff99ac 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: transform 0.8s ease-in-out, opacity 0.5s ease;
+            color: white;
+            text-align: center;
+        }
+
+        #overlay h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        #entry-button {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            background: white;
+            color: #ff6a88;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        #entry-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Hiding Animation */
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-100%);
+        }
+    
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff5f8;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(to right, #ff6a88, #ff99ac);
+    color: white;
+    padding: 90px 20px;
+}
+
+/* LETTER */
+.letter {
+    padding: 50px 20px;
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* GALLERY */
+.gallery {
+    padding: 50px 20px;
+}
+.videos {
+    padding: 60px 20px;
+    background: #fff0f5;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.video-box {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    width: 320px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+}
+
+.video-box:hover {
+    transform: scale(1.05);
+}
+
+.video-box video {
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.photo {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    width: 260px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+}
+
+.photo:hover {
+    transform: scale(1.07);
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* TIMELINE */
+.timeline {
+    background: white;
+    padding: 50px 20px;
+}
+
+.event {
+    margin: 25px auto;
+    max-width: 600px;
+    padding: 20px;
+    border-left: 4px solid #ff6a88;
+    text-align: left;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    background: #ff6a88;
+    color: white;
+}
+
+/* FLOATING HEARTS */
+.hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff6a88;
+    transform: rotate(45deg);
+    animation: floatUp 8s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff6a88;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    left: -10px;
+    top: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+<div id="overlay">
+<h1>جاهزة للمفاجأة؟ 🎁</h1>
+<button id="entry-button" onclick="revealSite()">دوسي هنا يا مزة ❤️</button>
+</div>
+<div class="hearts"></div>
+
+<section class="hero">
+    <h1>Happy Birthday, My Love 🎂💖</h1>
+    <p>المفروض اجبلك العالم كله لكن خلينا هنا النهارده في الصفحه ديه</p>
+    <p>هتكلم في الصفحه ديه عن ذكريتنا و كل لحظاتنا الحلوه الي ممكن نكون عشناها</p>
+    <p>اتمني من كل قلبي انها تعجبك </p>
+</section>
+
+<section class="letter">
+    <h2>A Little Message For You 💌</h2>
+    <p>من ساعة ما دخلتي حياتي.. وأنا فعلاً اتغيرت. يمكن في الأول مكنتش طايقك، بس من ساعة ما قربنا وانتي بقيتي بجد كل حاجة بالنسبة ليا.
+مهما حاولت أبين أو أقول، مش هتعرفي توصلي للحب اللي جوايا ليكي، لأنه بجد ميتوصفش وأكبر بكتير من أي كلام ممكن يتكتب.
+المهم عندي بجد ومن كل قلبي.. كل سنة وانتي طيبة يا أجمل مزة في حياتي، ويا رب دايماً مع بعض ومنفترقش أبداً.    </p>
+</section>
+
+<section class="gallery">
+    <h2>Our Favorite Memories 📸</h2>
+
+    <div class="photos">
+
+        <div class="photo">
+            <img src="photo1.jpg" alt="">
+            <p>اليوم الي بدا كل ده وممتن جدا لليوم ده❤️</p>
+        </div>
+
+        <div class="photo">
+            <img src="photo2.jpg" alt="">
+           <p>اليوم الي قولتلك فيه بس ملقتش رد بس سماح ياستي❤😂</p>
+        </div>
+
+        <div class="photo">
+            <img src="photo3.jpg" alt="">
+           <p>يوم بجد مميز علي قلبي ومش عارف انساه بجد</p>
+      
+        </div>
+
+        <div class="photo">
+            <img src="photo4.jpg" alt="">
+            <p>يوم مبطلناش ضحك فيه بجد😂</p>
+        </div>
+
+        <div class="photo">
+            <img src="photo5.jpg" alt="">
+            <p>قعده بكررها في دماغي كل شويه من حلاوتها.</p>
+        </div>
+
+        <div class="photo">
+            <img src="photo6.jpg" alt="">
+            <p>دليل ان الحياه احسن بيكي💕</p>
+        </div>
+
+         <div class="photo">
+            <img src="photo7.jpg" alt="">
+            <p>يوم كنتي موجوده معايا فيه وكنت مبسوط بجد</p>
+        </div>
+
+    </div>
+</section>
+<section class="videos">
+    <h2>Our Special Moments 🎥</h2>
+
+    <div class="video-container">
+
+        <div class="video-box">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+            <p>اليوم الي وقعت فيه علي وشي❤️</p>
+        </div>
+
+        <div class="video-box">
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+            <p>ذكري حلوه وفيديو بيبسطني كل لما اشوفه 🎂💖</p>
+        </div>
+
+         <div class="video-box">
+            <video controls>
+                <source src="video3.mp4" type="video/mp4">
+            </video>
+            <p>ده فيديو ضحكني وذكري حلوه لينا ف حطيته الصراحه😂❤️</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<footer>
+    Forever yours and always by my side ❤️
+</footer>
+
+<script>
+    function revealSite() {
+            document.getElementById('overlay').classList.add('hidden');
+        }
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
+
+    document.querySelector(".hearts").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
